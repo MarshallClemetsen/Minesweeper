@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>MineSweeper</h1>
+    <form action="/" method="get">
+        <label for="containerHeight">Container Height:</label>
+        <input type="number" name="containerHeight" id="containerHeight" placeholder="Enter height">
+        
+        <label for="containerWidth">Container Width:</label>
+        <input type="number" name="containerWidth" id="containerWidth" placeholder="Enter width">
+        <button  type="submit">Generate Buttons</button>
+    </form>
+
+    <!-- Container for Buttons -->
+    <div id="buttonContainer">
+        <!-- {% for button in buttons %}
+          <button class="game-button" onclick="alert('{{ button.label }} clicked!')">{{ button.label }}</button>
+        {% endfor %} -->
+        {% for button in range(row_amount) %}
+            <div class="button_row">
+            {% for button in range(row_length) %}
+                <button class="game-button" onclick="alert('{{ button.label }} clicked!')">{{ button.label }}</button>
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

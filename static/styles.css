@@ -1,0 +1,33 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  left: 50%;
+  margin-top: 10px;
+  transform: translate(-50%, 0);
+}
+
+.button_row {
+  display: grid;
+}
+
+.generate-button {
+  height: 16px;
+  width: 50px;
+  margin: 0 0 0 0;
+  border-radius: 0;
+  border: 1px solid black;
+}
+.game-button {
+  height: 16px;
+  width: 16px;
+  margin: 0 0 0 0;
+  border-radius: 0;
+  border: 1px solid black;
+}
